@@ -54,6 +54,15 @@ namespace jeudontvousetesleheros.Web.UI
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
+                  name: "aventure-creation",
+                  pattern: "demarrer-une-nouvelle-aventure",
+                  defaults: new
+                  {
+                      controller = "Aventure",
+                      action = "Create"
+                  });
+
+                endpoints.MapControllerRoute(
                   name: "mesaventures",
                   pattern: "mes-aventures",
                   defaults: new
