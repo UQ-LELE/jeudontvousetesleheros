@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using jeudontvousetesleheros.Web.UI.Models;
+using jeudontvousetesleheros.Core.Data;
 using Microsoft.AspNetCore.Mvc;
 
 namespace jeudontvousetesleheros.Web.UI.Controllers
