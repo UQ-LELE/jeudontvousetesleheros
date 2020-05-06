@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
 namespace jeudontvousetesleheros.Core.Data.Models
 {
+    [Table("Paragraphe")]
     public class Paragraphe
     {
         #region Propriétés
@@ -30,6 +32,8 @@ namespace jeudontvousetesleheros.Core.Data.Models
         /// <summary>
         /// Question du paragraphe
         /// </summary>
+        /// 
+        [NotMapped]
         public Question MaQuestion { get; set; }
         #endregion
     }

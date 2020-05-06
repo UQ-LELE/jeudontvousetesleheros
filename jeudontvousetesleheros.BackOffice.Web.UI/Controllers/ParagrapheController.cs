@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using jeudontvousetesleheros.Core.Data;
 using jeudontvousetesleheros.Core.Data.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,14 +10,17 @@ namespace jeudontvousetesleheros.BackOffice.Web.UI.Controllers
 {
     public class ParagrapheController : Controller
     {
-        #region à supprimer après Entities
-        private List<Paragraphe> _maList = new List<Paragraphe>()
-        {
-            new Paragraphe(){Id=1, Numero=1, Titre="Titre 1"},
-            new Paragraphe(){Id=2, Numero=10, Titre="Titre 2"},
-            new Paragraphe(){Id=5, Numero=14, Titre="Titre 2"}
-        };
+        #region Champs privés
+        private DefaultContext _context = null;
         #endregion
+
+        #region Constructeurs
+        public ParagrapheController(DefaultContext context)
+        {
+            this._context = context;
+        }
+        #endregion
+
 
         #region Méthodes publiques
 
@@ -34,6 +38,9 @@ namespace jeudontvousetesleheros.BackOffice.Web.UI.Controllers
         [HttpPost]
         public ActionResult Create(Paragraphe paragraphe)
         {
+            this._context.Paragraphes.Add(paragraphe);
+            this._context.SaveChanges();
+
             return this.View();
         }
 
@@ -41,7 +48,7 @@ namespace jeudontvousetesleheros.BackOffice.Web.UI.Controllers
         {
             Paragraphe paragraphe = null;
 
-            paragraphe = _maList.First(item => item.Id == id);
+            paragraphe = this._context.Paragraphes.First(item => item.Id == id);
 
             return this.View(paragraphe);
         }
@@ -49,6 +56,13 @@ namespace jeudontvousetesleheros.BackOffice.Web.UI.Controllers
         [HttpPost]
         public ActionResult Edit(Paragraphe paragraphe)
         {
+            //this._context.Paragraphes.Update(paragraphe);
+
+            this._context.Attach<Paragraphe>(paragraphe);
+            this._context.Entry(paragraphe).Property(item => item.Titre).IsModified = true;
+
+            this._context.SaveChanges();
+
             return this.View();
         }
 
