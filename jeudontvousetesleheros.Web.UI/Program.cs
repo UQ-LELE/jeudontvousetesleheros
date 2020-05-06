@@ -22,5 +22,6 @@ namespace jeudontvousetesleheros.Web.UI
                 {
                     webBuilder.UseStartup<Startup>();
                 });
+
     }
 }
