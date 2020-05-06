@@ -8,7 +8,7 @@ namespace jeudontvousetesleheros.Core.Data
 {
     public class DefaultContext : DbContext
     {
-        public DefaultContext(DbContextOptions options) : base(options)
+        public DefaultContext(DbContextOptions<DefaultContext> options) : base(options)
         {
         }
 

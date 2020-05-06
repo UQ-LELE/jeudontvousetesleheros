@@ -29,7 +29,7 @@ namespace jeudontvousetesleheros.Web.UI
 
             string connectionString = this.Configuration.GetConnectionString("DefaultContext");
 
-            services.AddDbContext<DefaultContext>(options => options.UseSqlServer(connectionString));
+            services.AddDbContext<DefaultContext>(options => options.UseSqlServer(connectionString), ServiceLifetime.Scoped);
         }
 
 

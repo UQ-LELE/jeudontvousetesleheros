@@ -3,31 +3,27 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using jeudontvousetesleheros.Core.Data;
+using jeudontvousetesleheros.Core.Data.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace jeudontvousetesleheros.Web.UI.Controllers
 {
     public class AventureController : Controller
     {
-        public IActionResult Index()
+        private readonly DefaultContext _context = null;
+        public AventureController(DefaultContext context)
+        {
+            this._context = context;
+        }
+
+        public ActionResult Index()
         {
             this.ViewBag.MonTitre = "Aventures";
 
-            List<Aventure> maList = new List<Aventure>();
+            var query = from item in this._context.Aventures
+                        select item;
 
-            maList.Add(new Aventure()
-            {
-                Id = 1,
-                Titre = "ma premiere aventure"
-            }); 
-            
-            maList.Add(new Aventure()
-            {
-                Id = 2,
-                Titre = "ma seconde aventure"
-            });
-
-            return View(maList);
+            return View(query.ToList());
         }
     }
 }
