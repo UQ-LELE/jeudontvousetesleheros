@@ -11,6 +11,12 @@ namespace jeudontvousetesleheros.BackOffice.Web.UI.Controllers
     {
         #region Méthodes publiques
 
+        public ActionResult Index()
+        {
+
+            return this.View();
+        }
+
         public ActionResult Create()
         {
             return this.View();
@@ -21,6 +27,20 @@ namespace jeudontvousetesleheros.BackOffice.Web.UI.Controllers
         {
             return this.View();
         }
+
+        public ActionResult Edit(int id)
+        {
+
+            return this.View();
+        }
+
+        [HttpPost]
+        public ActionResult Edit(Paragraphe paragraphe)
+        {
+            return this.View();
+        }
+
+
         #endregion
     }
 }
