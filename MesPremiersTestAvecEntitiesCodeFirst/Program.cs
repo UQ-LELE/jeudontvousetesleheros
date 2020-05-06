@@ -1,7 +1,8 @@
-﻿using System.Linq
+﻿using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using System;
+using System.IO;
 
 namespace MesPremiersTestAvecEntitiesCodeFirst
 {
@@ -10,7 +11,10 @@ namespace MesPremiersTestAvecEntitiesCodeFirst
         static void Main(string[] args)
         {
             ConfigurationBuilder builder = new ConfigurationBuilder();
-            
+
+            builder.SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json");
+
             var config = builder.Build();
 
             string connectionString = config.GetConnectionString("DefaultContext");
@@ -18,7 +22,9 @@ namespace MesPremiersTestAvecEntitiesCodeFirst
 
             DbContextOptionsBuilder optionBuilder = new DbContextOptionsBuilder();
 
-            using (DefaultContext context = new DefaultContext(optionBuilder.Options))
+            optionBuilder.UseSqlServer(connectionString);
+
+            using (DefaultContext context = new DefaultContext(optionBuilder.Options)) 
             {
                 var query = from droide in context.Droides
                             select droide;
