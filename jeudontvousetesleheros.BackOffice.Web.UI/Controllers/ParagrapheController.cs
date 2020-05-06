@@ -9,6 +9,15 @@ namespace jeudontvousetesleheros.BackOffice.Web.UI.Controllers
 {
     public class ParagrapheController : Controller
     {
+        #region à supprimer après Entities
+        private List<Paragraphe> _maList = new List<Paragraphe>()
+        {
+            new Paragraphe(){Id=1, Numero=1, Titre="Titre 1"},
+            new Paragraphe(){Id=2, Numero=10, Titre="Titre 2"},
+            new Paragraphe(){Id=5, Numero=14, Titre="Titre 2"}
+        };
+        #endregion
+
         #region Méthodes publiques
 
         public ActionResult Index()
@@ -30,8 +39,11 @@ namespace jeudontvousetesleheros.BackOffice.Web.UI.Controllers
 
         public ActionResult Edit(int id)
         {
+            Paragraphe paragraphe = null;
 
-            return this.View();
+            paragraphe = _maList.First(item => item.Id == id);
+
+            return this.View(paragraphe);
         }
 
         [HttpPost]
