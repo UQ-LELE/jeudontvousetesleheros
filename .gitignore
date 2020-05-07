@@ -340,3 +340,5 @@ ASALocalRun/
 healthchecksdb
 /jeudontvousetesleheros.Web.UI/appsettings.json
 /jeudontvousetesleheros.BackOffice.Web.UI/appsettings.json
+/jeudontvousetesleheros.Core.Data/appsettings.json
+/jeudontvousetesleheros.Core.Data/appsettings.Development.json
