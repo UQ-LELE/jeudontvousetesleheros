@@ -38,8 +38,11 @@ namespace jeudontvousetesleheros.BackOffice.Web.UI.Controllers
         [HttpPost]
         public ActionResult Create(Paragraphe paragraphe)
         {
-            this._context.Paragraphes.Add(paragraphe);
-            this._context.SaveChanges();
+            if (this.ModelState.IsValid)
+            {
+                this._context.Paragraphes.Add(paragraphe);
+                this._context.SaveChanges();
+            }
 
             return this.View();
         }
