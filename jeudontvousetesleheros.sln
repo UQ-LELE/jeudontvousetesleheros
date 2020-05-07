@@ -19,6 +19,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestAuthentificationFaceboo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DecouverteValidator", "DecouverteValidator\DecouverteValidator.csproj", "{062A10AB-1821-4CDF-A6C5-B5470B9B32BA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExempleJediTestUnitaire", "ExempleJediTestUnitaire\ExempleJediTestUnitaire.csproj", "{835496F6-7815-4170-8635-5EC71B9011E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestJeuDroide", "TestJeuDroide\TestJeuDroide.csproj", "{59DD27CE-C99B-42FF-88A7-A45FFC2B089B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +53,14 @@ Global
 		{062A10AB-1821-4CDF-A6C5-B5470B9B32BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{062A10AB-1821-4CDF-A6C5-B5470B9B32BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{062A10AB-1821-4CDF-A6C5-B5470B9B32BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{835496F6-7815-4170-8635-5EC71B9011E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{835496F6-7815-4170-8635-5EC71B9011E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{835496F6-7815-4170-8635-5EC71B9011E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{835496F6-7815-4170-8635-5EC71B9011E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59DD27CE-C99B-42FF-88A7-A45FFC2B089B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59DD27CE-C99B-42FF-88A7-A45FFC2B089B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59DD27CE-C99B-42FF-88A7-A45FFC2B089B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59DD27CE-C99B-42FF-88A7-A45FFC2B089B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -58,6 +70,8 @@ Global
 		{708D3795-0565-44E9-9EE3-F4BC246D00A5} = {33B18D4F-4C9E-4B02-903D-7A93A4C030C5}
 		{AC8BB77A-105D-4FD5-9F1E-3A4D0EE20620} = {33B18D4F-4C9E-4B02-903D-7A93A4C030C5}
 		{062A10AB-1821-4CDF-A6C5-B5470B9B32BA} = {33B18D4F-4C9E-4B02-903D-7A93A4C030C5}
+		{835496F6-7815-4170-8635-5EC71B9011E2} = {33B18D4F-4C9E-4B02-903D-7A93A4C030C5}
+		{59DD27CE-C99B-42FF-88A7-A45FFC2B089B} = {33B18D4F-4C9E-4B02-903D-7A93A4C030C5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BDD82E76-F01E-4624-BFDF-714B6C50E237}
