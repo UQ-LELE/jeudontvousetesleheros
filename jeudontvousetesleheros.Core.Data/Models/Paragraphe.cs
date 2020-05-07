@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
@@ -13,6 +14,8 @@ namespace jeudontvousetesleheros.Core.Data.Models
         /// <summary>
         /// Id venant de la base
         /// </summary>
+        
+        [Key]
         public int Id { get; set; }
 
         /// <summary>
@@ -33,7 +36,6 @@ namespace jeudontvousetesleheros.Core.Data.Models
         /// Question du paragraphe
         /// </summary>
         /// 
-        [NotMapped]
         public Question MaQuestion { get; set; }
         #endregion
     }

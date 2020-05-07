@@ -23,6 +23,12 @@ namespace TestAuthentificationFacebook
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
+            services.AddAuthentication().AddFacebook(option =>
+            {
+                option.AppId = this.Configuration["apis:facebook:id"];
+                option.AppSecret = this.Configuration["apis:facebook:secret"];
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

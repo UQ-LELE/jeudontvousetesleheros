@@ -27,6 +27,12 @@ namespace jeudontvousetesleheros.BackOffice.Web.UI
         {
             services.AddControllersWithViews();
 
+            services.AddAuthentication().AddFacebook(option =>
+            {
+                option.AppId = this.Configuration["Api:Facebook:AppId"];
+                option.AppSecret = this.Configuration["Api:Facebook:AppSecret"];
+            });
+
             string connectionString = this.Configuration.GetConnectionString("DefaultContext");
 
             services.AddDbContext<DefaultContext>(options => options.UseSqlServer(connectionString), ServiceLifetime.Scoped);
@@ -47,13 +53,16 @@ namespace jeudontvousetesleheros.BackOffice.Web.UI
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
             app.UseRouting();
 
             app.UseAuthorization();
+            app.UseAuthentication();
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapControllers();
+                endpoints.MapRazorPages();
+
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
