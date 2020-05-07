@@ -23,6 +23,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExempleJediTestUnitaire", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestJeuDroide", "TestJeuDroide\TestJeuDroide.csproj", "{59DD27CE-C99B-42FF-88A7-A45FFC2B089B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TestUnitaire", "TestUnitaire", "{4F2E36BE-7B3B-451B-8F32-09A78C491CA8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestWebUi", "TestWebUi\TestWebUi.csproj", "{C86E807B-D59B-44A9-8DD8-14961B687F4E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -61,6 +65,10 @@ Global
 		{59DD27CE-C99B-42FF-88A7-A45FFC2B089B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{59DD27CE-C99B-42FF-88A7-A45FFC2B089B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{59DD27CE-C99B-42FF-88A7-A45FFC2B089B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C86E807B-D59B-44A9-8DD8-14961B687F4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C86E807B-D59B-44A9-8DD8-14961B687F4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C86E807B-D59B-44A9-8DD8-14961B687F4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C86E807B-D59B-44A9-8DD8-14961B687F4E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -72,6 +80,7 @@ Global
 		{062A10AB-1821-4CDF-A6C5-B5470B9B32BA} = {33B18D4F-4C9E-4B02-903D-7A93A4C030C5}
 		{835496F6-7815-4170-8635-5EC71B9011E2} = {33B18D4F-4C9E-4B02-903D-7A93A4C030C5}
 		{59DD27CE-C99B-42FF-88A7-A45FFC2B089B} = {33B18D4F-4C9E-4B02-903D-7A93A4C030C5}
+		{C86E807B-D59B-44A9-8DD8-14961B687F4E} = {4F2E36BE-7B3B-451B-8F32-09A78C491CA8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BDD82E76-F01E-4624-BFDF-714B6C50E237}

@@ -11,12 +11,6 @@ namespace jeudontvousetesleheros.Web.UI.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
-        {
-            _logger = logger;
-        }
 
         public IActionResult Index()
         {
@@ -25,6 +19,13 @@ namespace jeudontvousetesleheros.Web.UI.Controllers
 
         public IActionResult Privacy()
         {
+            return View();
+        }      
+        
+        public IActionResult About()
+        {
+            ViewData["Message"] = "Your application description page.";
+
             return View();
         }
 
