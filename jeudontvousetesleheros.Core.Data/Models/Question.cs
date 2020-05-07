@@ -26,7 +26,6 @@ namespace jeudontvousetesleheros.Core.Data.Models
         /// Liste des réponses possibles
         /// </summary>
         /// 
-        [NotMapped]
         public List<Reponse> MesReponses { get; set; }
 
         #endregion

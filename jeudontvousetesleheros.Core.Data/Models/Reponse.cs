@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
 namespace jeudontvousetesleheros.Core.Data.Models
 {
+    [Table("Proposition")]
     public class Reponse
     {
 
@@ -12,6 +15,8 @@ namespace jeudontvousetesleheros.Core.Data.Models
         /// <summary>
         /// Id de la réponse
         /// </summary>
+
+        [Key]
         public int Id { get; set; }
 
 
@@ -19,6 +24,7 @@ namespace jeudontvousetesleheros.Core.Data.Models
         /// Proposition de réponse
         /// </summary>
         public string Titre { get; set; }
+        public int QuestionId { get; set; }
         #endregion
     }
 }
