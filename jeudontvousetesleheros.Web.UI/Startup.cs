@@ -54,22 +54,22 @@ namespace jeudontvousetesleheros.Web.UI
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
+               name: "aventure-edition",
+               pattern: "éditer-une-aventure",
+               defaults: new { controller = "Aventure", action = "Edit" },
+               constraints: new { id = @"\d+" });
+
+
+                endpoints.MapControllerRoute(
                   name: "aventure-creation",
                   pattern: "demarrer-une-nouvelle-aventure",
-                  defaults: new
-                  {
-                      controller = "Aventure",
-                      action = "Create"
-                  });
+                  defaults: new { controller = "Aventure", action = "Create" });
+
 
                 endpoints.MapControllerRoute(
                   name: "mesaventures",
                   pattern: "mes-aventures",
-                  defaults: new
-                  {
-                      controller = "Aventure",
-                      action = "Index"
-                  });
+                  defaults: new { controller = "Aventure", action = "Index" });
 
                 endpoints.MapControllerRoute(
                     name: "default",

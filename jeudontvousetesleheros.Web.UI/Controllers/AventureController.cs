@@ -25,5 +25,15 @@ namespace jeudontvousetesleheros.Web.UI.Controllers
 
             return View(query.ToList());
         }
+
+        public ActionResult Create()
+        {
+            return this.View();
+        }
+
+        public ActionResult Edit(int id)
+        {
+            return this.View();
+        }
     }
 }
