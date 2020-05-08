@@ -51,9 +51,21 @@ namespace jeudontvousetesleheros.Web.UI.Controllers
             return result;
         }
 
-        public ActionResult BeginNewOne()
+        public ActionResult BeginNewOne(int id)
         {
-            return this.View(this._paragrapheDataLayer.GetFirst());
+            Paragraphe item = null;
+
+            if(id == 0)
+            {
+                item = this._paragrapheDataLayer.GetFirst();
+
+            }
+            else
+            {
+                item = this._paragrapheDataLayer.GetOne(id);
+            }
+
+            return this.View(item);
         }
 
         public ActionResult Edit(int id)

@@ -13,14 +13,22 @@
     </p>
 </div>
 
+@if (Model.MaQuestion != null)
+{
 <div>
     <p>
         @Model.MaQuestion.Titre
     </p>
-    <ul>
-        @foreach (var proposition in Model.MaQuestion.MesReponses)
-        {
-<li>@proposition.Description</li>
-        }
-    </ul>
+    @if (Model.MaQuestion.MesReponses != null && Model.MaQuestion.MesReponses.Count > 0)
+    {
+        <ul>
+            @foreach (var proposition in Model.MaQuestion.MesReponses)
+            {
+                <li><a asp-controller="Aventure" asp-action="BeginNewOne" asp-route-id="@proposition.ParagrapheId">@proposition.Description</a></li>
+            }
+        </ul>
+    }
+
 </div>
+
+}
