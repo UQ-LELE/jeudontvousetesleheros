@@ -9,6 +9,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
+using jeudontvousetesleheros.Core.Data.DataLayer;
 
 namespace jeudontvousetesleheros.Web.UI
 {
@@ -28,6 +29,8 @@ namespace jeudontvousetesleheros.Web.UI
 
 
             string connectionString = this.Configuration.GetConnectionString("DefaultContext");
+
+            services.AddTransient<ParagrapheDataLayer, ParagrapheDataLayer>();
 
             services.AddDbContext<DefaultContext>(options => options.UseSqlServer(connectionString), ServiceLifetime.Scoped);
         }

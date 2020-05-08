@@ -1,7 +1,26 @@
-﻿
+﻿@model jeudontvousetesleheros.Core.Data.Models.Paragraphe
+
 @{
-    ViewData["Title"] = "BeginNewOne";
+    ViewData["Title"] = "C'est parti !";
 }
 
-<h1>BeginNewOne</h1>
+<h1>C'est parti</h1>
 
+<div>
+    <h1>@Model.Titre</h1>
+    <p>
+        @Model.Description
+    </p>
+</div>
+
+<div>
+    <p>
+        @Model.MaQuestion.Titre
+    </p>
+    <ul>
+        @foreach (var proposition in Model.MaQuestion.MesReponses)
+        {
+<li>@proposition.Description</li>
+        }
+    </ul>
+</div>

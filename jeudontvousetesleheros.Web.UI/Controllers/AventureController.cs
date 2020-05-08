@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using jeudontvousetesleheros.Core.Data;
+using jeudontvousetesleheros.Core.Data.DataLayer;
 using jeudontvousetesleheros.Core.Data.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -11,9 +12,12 @@ namespace jeudontvousetesleheros.Web.UI.Controllers
     public class AventureController : Controller
     {
         private readonly DefaultContext _context = null;
-        public AventureController(DefaultContext context)
+
+        private ParagrapheDataLayer _paragrapheDataLayer = null;
+        public AventureController(DefaultContext context, ParagrapheDataLayer paragrapheDataLayer)
         {
             this._context = context;
+            this._paragrapheDataLayer = paragrapheDataLayer;
         }
 
         public ActionResult Index()
@@ -49,7 +53,7 @@ namespace jeudontvousetesleheros.Web.UI.Controllers
 
         public ActionResult BeginNewOne()
         {
-            return this.View();
+            return this.View(this._paragrapheDataLayer.GetFirst());
         }
 
         public ActionResult Edit(int id)
