@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using jeudontvousetesleheros.BackOffice.Web.UI.Constraints;
 using jeudontvousetesleheros.Core.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -62,6 +63,13 @@ namespace jeudontvousetesleheros.BackOffice.Web.UI
             {
                 endpoints.MapControllers();
                 endpoints.MapRazorPages();
+
+                endpoints.MapControllerRoute(
+                    name: "editparaf",
+                    pattern: "edition-paragraphe/{id}",
+                    defaults : new { controller = "paragraphe", action = "Edit" },
+                    constraints: new {id = new LogConstraint() });
+                    //constraints: new {id = @"\d+" });
 
                 endpoints.MapControllerRoute(
                     name: "default",
