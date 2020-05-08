@@ -34,6 +34,21 @@ namespace jeudontvousetesleheros.Web.UI.Controllers
         [HttpPost]
         public ActionResult Create(Aventure aventure)
         {
+            ActionResult result = this.View(aventure);
+
+            if (ModelState.IsValid)
+            {
+                this._context.Aventures.Add(aventure);
+                this._context.SaveChanges();
+
+                result = this.RedirectToAction("BeginNewOne");
+            }
+
+            return result;
+        }
+
+        public ActionResult BeginNewOne()
+        {
             return this.View();
         }
 
