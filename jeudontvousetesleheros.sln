@@ -15,17 +15,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exemples", "Exemples", "{33
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MesPremiersTestAvecEntitiesCodeFirst", "MesPremiersTestAvecEntitiesCodeFirst\MesPremiersTestAvecEntitiesCodeFirst.csproj", "{708D3795-0565-44E9-9EE3-F4BC246D00A5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestAuthentificationFacebook", "TestAuthentificationFacebook\TestAuthentificationFacebook.csproj", "{AC8BB77A-105D-4FD5-9F1E-3A4D0EE20620}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestAuthentificationFacebook", "TestAuthentificationFacebook\TestAuthentificationFacebook.csproj", "{AC8BB77A-105D-4FD5-9F1E-3A4D0EE20620}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DecouverteValidator", "DecouverteValidator\DecouverteValidator.csproj", "{062A10AB-1821-4CDF-A6C5-B5470B9B32BA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DecouverteValidator", "DecouverteValidator\DecouverteValidator.csproj", "{062A10AB-1821-4CDF-A6C5-B5470B9B32BA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExempleJediTestUnitaire", "ExempleJediTestUnitaire\ExempleJediTestUnitaire.csproj", "{835496F6-7815-4170-8635-5EC71B9011E2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExempleJediTestUnitaire", "ExempleJediTestUnitaire\ExempleJediTestUnitaire.csproj", "{835496F6-7815-4170-8635-5EC71B9011E2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestJeuDroide", "TestJeuDroide\TestJeuDroide.csproj", "{59DD27CE-C99B-42FF-88A7-A45FFC2B089B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestJeuDroide", "TestJeuDroide\TestJeuDroide.csproj", "{59DD27CE-C99B-42FF-88A7-A45FFC2B089B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TestUnitaire", "TestUnitaire", "{4F2E36BE-7B3B-451B-8F32-09A78C491CA8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestWebUi", "TestWebUi\TestWebUi.csproj", "{C86E807B-D59B-44A9-8DD8-14961B687F4E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestWebUi", "TestWebUi\TestWebUi.csproj", "{C86E807B-D59B-44A9-8DD8-14961B687F4E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DecouverteSession", "DecouverteSession\DecouverteSession.csproj", "{D7EF8D9E-F813-426E-ADDE-047BE303CCF3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,10 @@ Global
 		{C86E807B-D59B-44A9-8DD8-14961B687F4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C86E807B-D59B-44A9-8DD8-14961B687F4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C86E807B-D59B-44A9-8DD8-14961B687F4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7EF8D9E-F813-426E-ADDE-047BE303CCF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7EF8D9E-F813-426E-ADDE-047BE303CCF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7EF8D9E-F813-426E-ADDE-047BE303CCF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7EF8D9E-F813-426E-ADDE-047BE303CCF3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -81,6 +87,7 @@ Global
 		{835496F6-7815-4170-8635-5EC71B9011E2} = {33B18D4F-4C9E-4B02-903D-7A93A4C030C5}
 		{59DD27CE-C99B-42FF-88A7-A45FFC2B089B} = {33B18D4F-4C9E-4B02-903D-7A93A4C030C5}
 		{C86E807B-D59B-44A9-8DD8-14961B687F4E} = {4F2E36BE-7B3B-451B-8F32-09A78C491CA8}
+		{D7EF8D9E-F813-426E-ADDE-047BE303CCF3} = {33B18D4F-4C9E-4B02-903D-7A93A4C030C5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BDD82E76-F01E-4624-BFDF-714B6C50E237}
