@@ -31,6 +31,12 @@ namespace jeudontvousetesleheros.Web.UI.Controllers
             return this.View();
         }
 
+        [HttpPost]
+        public ActionResult Create(Aventure aventure)
+        {
+            return this.View();
+        }
+
         public ActionResult Edit(int id)
         {
             return this.View();
